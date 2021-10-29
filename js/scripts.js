@@ -35,8 +35,6 @@ function lister(number) {
   if ($("#reverse").is(':checked')){
     if (pathfinder(number) > 3){
       for (let i = number; i>0;i--){
-        console.log(i);
-        console.log(returnFormattedValues(pathfinder(i)));
         output = output + " " + returnFormattedValues(pathfinder(i));
       }
     }else{
@@ -45,8 +43,6 @@ function lister(number) {
   }else{
     if (pathfinder(number) > 3){
     for (let i = 1; i<=number;i++){
-      console.log(i);
-      console.log(returnFormattedValues(pathfinder(i)));
       output = output + " " + returnFormattedValues(pathfinder(i));
     }
   }else{
