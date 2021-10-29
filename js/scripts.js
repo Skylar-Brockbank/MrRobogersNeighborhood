@@ -14,17 +14,31 @@ return userInput;
 function returnFormattedValues(input) {
   let comparison = ["Beep!","Boop!","Won't you be my neighbor?"]
   if(parseInt(input-1) < comparison.length){
-    $("#outputs").prepend("<li>" + comparison[input-1] + "</li>");
+   return comparison[input-1];
   }else{
-    $("#outputs").prepend("<li>" + input + "</li>");
+    return input;
   }
+}
+
+function lister(number) {
+  let output ="";
+  if (number > 3){
+  for (let i = 1; i<=number;i++){
+    console.log(i);
+    console.log(returnFormattedValues(pathfinder(i)));
+    output = output + " " + returnFormattedValues(pathfinder(i));
+  }
+}else{
+  output = returnFormattedValues(number);
+}
+return output;
 }
 
 $(document).ready(function() {
   $("#form").submit(function(event) {
     event.preventDefault();
     let input = pathfinder($("#userInputBox").val())
-    returnFormattedValues(input);
+    $("#outputs").prepend("<li class='output'>" + lister(input) + "</li>");
     this.reset();
   });
 });

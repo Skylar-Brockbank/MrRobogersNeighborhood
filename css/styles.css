@@ -1,0 +1,26 @@
+body {
+  background-image: url(../img/MrRogersNeighborhood.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#ioContainer {
+  background-color:rgba(245, 245, 245, 0.733);
+  width: 80%;
+  margin: 0 auto;
+  padding: 1em;
+  display: grid;
+  justify-content: center;
+  border-radius: 1em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li{
+  background-color: rgba(245, 245, 245, 0.733);
+  margin: .5em;
+  padding: .5em;
+  border-radius: .25em;
+}
