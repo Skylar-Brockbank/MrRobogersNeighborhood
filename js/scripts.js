@@ -8,6 +8,16 @@ function pathfinder(userInput) {
 }
 return userInput;
 }
+//utilities
+
+function reverseString(string){
+  let strArray = string.split(" ");
+  let output = "";
+  for (let i = strArray.length-1; i>=0; i--){
+    output = output + " " + strArray[i];
+  }
+  return output;
+}
 
 //user interface logic
 
@@ -22,23 +32,36 @@ function returnFormattedValues(input) {
 
 function lister(number) {
   let output ="";
-  if (number > 3){
-  for (let i = 1; i<=number;i++){
-    console.log(i);
-    console.log(returnFormattedValues(pathfinder(i)));
-    output = output + " " + returnFormattedValues(pathfinder(i));
+  if ($("#reverse").is(':checked')){
+    if (pathfinder(number) > 3){
+      for (let i = number; i>0;i--){
+        console.log(i);
+        console.log(returnFormattedValues(pathfinder(i)));
+        output = output + " " + returnFormattedValues(pathfinder(i));
+      }
+    }else{
+      output = returnFormattedValues(number);
+    }
+  }else{
+    if (pathfinder(number) > 3){
+    for (let i = 1; i<=number;i++){
+      console.log(i);
+      console.log(returnFormattedValues(pathfinder(i)));
+      output = output + " " + returnFormattedValues(pathfinder(i));
+    }
+  }else{
+    output = returnFormattedValues(number);
   }
-}else{
-  output = returnFormattedValues(number);
 }
 return output;
 }
+
 
 $(document).ready(function() {
   $("#form").submit(function(event) {
     event.preventDefault();
     let input = pathfinder($("#userInputBox").val())
-    $("#outputs").prepend("<li class='output'>" + lister(input) + "</li>");
+      $("#outputs").prepend("<li class='output'>" + lister(input) + "</li>");
     this.reset();
   });
 });
