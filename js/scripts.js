@@ -1,6 +1,8 @@
 function pathfinder(userInput) {
   let functionInput = userInput.toString();
-  if (functionInput.includes(1)) {
+  if (functionInput.includes(2)) {
+    return 2;
+  }else if (functionInput.includes(1)) {
     return 1;
   }else{
     return userInput;
