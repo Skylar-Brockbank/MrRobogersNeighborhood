@@ -15,7 +15,7 @@
 
 ## Description
 
-__
+_This program takes an input and checks it against a list. If it's a number that includes a 1 2 or 3 it will replace it with a string, otherwise it will count up to the input, replacing the a 2 and 3 containing strings along the way. If it isn't a number, it will return the same string_
 
 ## Specs
 * _returns a corrisponding value depending on a user input and adds it to a persistent list on screen_
@@ -52,7 +52,7 @@ Expected Output: 1
 
 ## Known Bugs
 
-* _No known bugs_
+* _if you submit nothing, it returns undefined_
 
 ## Contact Information
 _Skylar Brockbank, Skylar.brockbank@gmail.com_
