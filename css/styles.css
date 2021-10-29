@@ -1,7 +1,15 @@
 body {
   background-image: url(../img/MrRogersNeighborhood.jpg);
-  background-repeat: no-repeat;
   background-size: cover;
+}
+
+#TitleBox {
+  text-align: center;
+  background-color: rgba(245, 245, 245, 0.733);
+  width: 90%;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: .5em;
 }
 
 #ioContainer {
@@ -16,6 +24,10 @@ body {
 
 ul {
   list-style-type: none;
+  justify-self: center;
+
+  width:100%;
+  display:grid;
 }
 
 li{
@@ -23,4 +35,6 @@ li{
   margin: .5em;
   padding: .5em;
   border-radius: .25em;
+  justify-self: center;
+  width: 80%;
 }
