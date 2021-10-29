@@ -11,10 +11,12 @@ return userInput;
 
 //user interface logic
 
-function returnFormattedValues(number) {
+function returnFormattedValues(input) {
   let comparison = ["Beep!","Boop!","Won't you be my neighbor?"]
-  if((number-1)<comparison.length){
-    $("#outputs").prepend("<li>" + comparison[number-1] + "</li>");
+  if(parseInt(input-1) < comparison.length){
+    $("#outputs").prepend("<li>" + comparison[input-1] + "</li>");
+  }else{
+    $("#outputs").prepend("<li>" + input + "</li>");
   }
 }
 
