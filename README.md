@@ -23,27 +23,23 @@ _This program takes an input and checks it against a list. If it's a number that
 
 
 ## Tests
->Describe: pathfinder(value)
->
->Test: It should return the input that the user gives it
+Describe: pathfinder(value)
 
->Code: pathfinder(51)
->Expected Output: 51
->
->Test: It should return 1 if there is a 1 in the input this supersedes the first rule
+* Test: It should return the input that the user gives it
+* Code: pathfinder(51)
+* Expected Output: 51
 
->Code: pathfinder(1)
->Expected Output: 1
->
->Test: It should return 2 if there is a 2 in the input this supersedes the second rule
+* Test: It should return 1 if there is a 1 in the input this  supersedes the first rule
+* Code: pathfinder(1)
+* Expected Output: 1
 
->Code: pathfinder(2)
->Expected Output: 1
->
->Test: It should return 3 if there is a 3 in the input this supersedes the third rule
+* Test: It should return 2 if there is a 2 in the input this supersedes the second rule
+* Code: pathfinder(2)
+* Expected Output: 1
 
->Code: pathfinder(3)
->Expected Output: 1
+* Test: It should return 3 if there is a 3 in the input this supersedes the third rule
+* Code: pathfinder(3)
+* Expected Output: 1
 
 
 ## Setup/Installation Requirements
