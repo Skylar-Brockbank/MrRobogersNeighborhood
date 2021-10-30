@@ -22,7 +22,10 @@ function reverseString(string){
 //user interface logic
 
 function returnFormattedValues(input) {
-  let comparison = ["Beep!","Boop!","Won't you be my neighbor?"]
+  let comparison = ["Beep!","Boop!","Won't you be my neighbor?"];
+  if ($("#userNameBox").val()!=''){
+    comparison[2] = "won't you be my neighbor "+$("#userNameBox").val()+"?";
+  }
   if(parseInt(input-1) < comparison.length){
    return comparison[input-1];
   }else{
