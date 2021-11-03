@@ -36,31 +36,22 @@ function returnFormattedValues(input) {
 function lister(number) {
   let output ="";
   if ($("#reverse").is(':checked')){
-    if (pathfinder(number) > 3){
-      for (let i = number; i>0;i--){
-        output = output + " " + returnFormattedValues(pathfinder(i));
-      }
-    }else{
-      output = returnFormattedValues(number);
-    }
-  }else{
-    if (pathfinder(number) > 3){
-    for (let i = 1; i<=number;i++){
+    for (let i = number; i > 0; i++){
       output = output + " " + returnFormattedValues(pathfinder(i));
     }
   }else{
-    output = returnFormattedValues(number);
+    for (let i = 1; i <= number; i++){
+      output = output + " " + returnFormattedValues(pathfinder(i));
+    }
   }
+  return output;
 }
-return output;
-}
-
 
 $(document).ready(function() {
   $("#form").submit(function(event) {
     event.preventDefault();
-    let input = pathfinder($("#userInputBox").val())
-      $("#outputs").prepend("<li class='output'>" + lister(input) + "</li>");
+    let input = $("#userInputBox").val();
+    $("#outputs").prepend("<li class='output'>" + lister(input) + "</li>");
     this.reset();
   });
 });

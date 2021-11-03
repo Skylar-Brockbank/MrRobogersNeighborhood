@@ -12,7 +12,7 @@ body {
   border-radius: .5em;
 }
 
-#ioContainer {
+#iContainer {
   background-color:rgba(245, 245, 245, 0.733);
   width: 80%;
   margin: 0 auto;
@@ -20,6 +20,21 @@ body {
   display: grid;
   justify-content: center;
   border-radius: 1em;
+}
+
+#oContainer {
+  background-color:rgba(245, 245, 245, 0.733);
+  width: 80%;
+  margin: 0 auto;
+  padding: 1em;
+  display: grid;
+  border-radius: 1em;
+  margin-top: 1em;
+}
+
+#oContainer > h3 {
+  justify-self: start;
+  margin-left: 2em;
 }
 
 ul {
@@ -37,6 +52,7 @@ li{
   border-radius: .25em;
   justify-self: center;
   width: 80%;
+  
 }
 form {
   display: grid;
